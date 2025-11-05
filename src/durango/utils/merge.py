@@ -20,11 +20,7 @@ def deep_merge_dicts(base: Mapping[str, Any], overrides: Mapping[str, Any]) -> d
 
     result: dict[str, Any] = deepcopy(dict(base))
     for key, value in overrides.items():
-        if (
-            key in result
-            and isinstance(result[key], Mapping)
-            and isinstance(value, Mapping)
-        ):
+        if key in result and isinstance(result[key], Mapping) and isinstance(value, Mapping):
             result[key] = deep_merge_dicts(result[key], value)
         else:
             result[key] = deepcopy(value)

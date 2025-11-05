@@ -44,9 +44,7 @@ def test_yaml_parsing_merges_documents(tmp_path: Path) -> None:
     pytest.importorskip("ruamel.yaml")
 
     path = tmp_path / "config.yaml"
-    path.write_text(
-        "---\nsection:\n  value: 1\n---\nsection:\n  flag: true\n", encoding="utf-8"
-    )
+    path.write_text("---\nsection:\n  value: 1\n---\nsection:\n  flag: true\n", encoding="utf-8")
     config = FileSourceConfig()
     data = load_config_file(path, config=config)
     assert data["section"]["value"] == 1

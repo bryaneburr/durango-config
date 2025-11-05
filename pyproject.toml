@@ -61,6 +61,8 @@ durango = { workspace = true }
 [tool.ruff]
 line-length = 100
 target-version = "py39"
+
+[tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "DTZ", "C4"]
 ignore = ["B008"]
 
@@ -80,6 +82,11 @@ disallow_incomplete_defs = true
 show_error_codes = true
 strict_optional = true
 plugins = ["pydantic.mypy"]
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = ["ruamel.yaml", "ruamel.yaml.*", "tomli", "tomllib", "pytest"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 addopts = "--strict-markers --disable-warnings"

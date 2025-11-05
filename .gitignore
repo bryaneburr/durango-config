@@ -45,3 +45,4 @@ ENV/
 .uv/
 .cache/
 notes/.autosave/
+site/

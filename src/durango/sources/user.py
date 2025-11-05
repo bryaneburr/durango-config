@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Mapping, MutableMapping
 from dataclasses import dataclass, field
-from typing import Any, Mapping, MutableMapping
+from typing import Any
 
 from durango.utils import deep_merge_dicts
 

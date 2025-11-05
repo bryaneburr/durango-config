@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import os
+from collections.abc import Iterable, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Callable, Generic, Iterable, Mapping, TypeVar
+from typing import Any, Callable, Generic, TypeVar
 
 from pydantic import ValidationError
 

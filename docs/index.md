@@ -1,4 +1,6 @@
-# Durango Documentation
+# Durango Config
+
+<img src="img/durango_logo.png" height="100" style="height: 100px"/>
 
 Durango is a configuration toolkit for Python applications that need predictable precedence across files, environment variables, and runtime overrides. It wraps [Pydantic Settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) with a focused API that:
 

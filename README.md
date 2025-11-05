@@ -1,6 +1,6 @@
 # Durango
 
-<img src="images/durango_logo.png" height="200" style="height: 200px" />
+<img src="https://github.com/bryaneburr/durango-config/raw/main/images/durango_logo.png" height="200" style="height: 200px" />
 
 Durango is a lightweight configuration management toolkit that layers strongly typed settings, configuration files, environment variables, and programmatic overrides using [Pydantic Settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/). It is designed for CLI tools and services that need predictable precedence, multi-format config files, and clear error reporting.
 
@@ -41,7 +41,6 @@ Environment variables take the form `MYAPP__API_URL=true`. To override a nested 
 
 - Docs site (WIP): see `docs/`
 - Architecture notes: `ARCH.md`
-- Project plan: `notes/SPEC.md`
 - Working session notes: `notes/STATUS.md`
 
 ## Contributing

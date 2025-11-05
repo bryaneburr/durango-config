@@ -34,5 +34,5 @@ nav:
   - Reference:
       - Config Manager: reference/config-manager.md
       - Settings Models: reference/settings.md
+      - Usage Examples: reference/examples.md
   - Architecture: architecture.md
-  - Project Plan: project-plan.md

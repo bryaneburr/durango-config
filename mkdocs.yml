@@ -1,0 +1,45 @@
+site_name: Durango
+site_description: Flexible layered configuration management built on Pydantic Settings.
+site_url: https://durango.dev/docs
+repo_url: https://github.com/durango-dev/durango
+repo_name: durango-dev/durango
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
+nav:
+  - Overview: index.md
+  - Reference:
+      - Config Manager: reference/config-manager.md
+      - Settings Models: reference/settings.md
+  - Architecture: ../ARCH.md
+  - Project Plan: ../notes/SPEC.md

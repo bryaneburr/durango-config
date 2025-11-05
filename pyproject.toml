@@ -31,12 +31,15 @@ dependencies = [
   "python-dateutil>=2.9",
   "tomli>=2.0.1; python_version < '3.11'",
   "ruamel.yaml>=0.17",
+  "mkdocs-shadcn>=0.9.7",
+  "mkdocs-click>=0.9.0",
 ]
 
 [project.optional-dependencies]
 docs = [
   "mkdocs>=1.5",
-  "mkdocs-material>=9.5",
+  "mkdocs-shadcn>=0.9.7",
+  "mkdocs-click>=0.9",
   "mkdocstrings[python]>=0.24",
 ]
 dev = [

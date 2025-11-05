@@ -6,5 +6,5 @@
 - Implemented core modules (config manager, sources, utils, exceptions) plus Google-style docstrings.
 - Added pytest coverage for precedence, environment parsing, and file loaders; `uv run pytest` passing.
 - Adjusted precedence to anchor on model defaults, added automatic config file creation, and scrubbed repository-specific references.
-- Moved SPEC planning doc under `notes/`, added AGENTS guides for config, sources, and utilities modules.
+- Added AGENTS guides for config, sources, and utilities modules.
 - Next session: extend documentation, finalize release metadata, and draft publishing workflow.

@@ -26,8 +26,8 @@ Each layer builds on the previous one. Components expose pure functions where po
 
 ## Integration Expectations
 
-- Host applications provide their preferred default config path during manager construction.
-- Components that mutate external systems (like search manifests) should register callbacks through `ConfigManager`.
-- Lazy imports keep CLI startups fast; `durango.__getattr__` defers heavy modules until needed.
+- Host applications provide their preferred default config path during manager construction; Durango will create the file with model defaults if it does not exist.
+- Components that mutate external systems (like search manifests) should register callbacks through `ConfigManager` to track reloads.
+- Extend file or environment sources by adding new helpers under `durango.sources` and composing them inside `ConfigManager` if your deployment has specialised requirements.
 
 Diagrams and deeper explanations will be added as implementation solidifies.

@@ -16,6 +16,6 @@ Durango coordinates configuration across multiple consumers. Keep this document 
 
 ## Next Steps for Contributors
 
-- Document custom source extension points and JSON error payload expectations (see `notes/SPEC.md`, Phase 3).
+- Document custom source extension points and JSON error payload expectations when they change so downstream consumers stay aligned.
 - Flesh out docs for multi-level nested settings and environment overrides.
 - Prepare release automation for TestPyPI/PyPI once documentation stabilizes.

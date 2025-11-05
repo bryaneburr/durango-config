@@ -10,6 +10,6 @@ Durango is a standalone configuration toolkit built on Pydantic Settings. Use th
 - Configuration files must be readable/writable in YAML, JSON, or TOML. When introducing new formats or serializers, coordinate updates in sources/tests/docs.
 - Validation is strict (`extra=forbid`). Unknown keys should raise actionable errors surfaced through CLI/JSON payloads.
 - Keep helpers pure where possible; ensure new utilities or sources document coordination expectations (`src/durango/**/AGENTS.md`).
-- Maintain docs in `docs/` + `notes/`, recording plan changes in `notes/SPEC.md` and session updates in `notes/STATUS.md`.
+- Maintain docs in `docs/` + `notes/`, recording decisions and next steps in `notes/STATUS.md`.
 - Prepare releases via feature branches, running `uv run pre-commit run --all-files`, `uv run pytest`, `uv run mypy`, and `uv run mkdocs build --strict` before tagging.
 - After Durango reaches PyPI, integrate into dorgy through lazy imports and shared CLI helpers, keeping Chromadb/search state updates consistent.

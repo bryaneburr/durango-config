@@ -1,8 +1,8 @@
 site_name: Durango
 site_description: Flexible layered configuration management built on Pydantic Settings.
-site_url: https://durango.dev/docs
-repo_url: https://github.com/durango-dev/durango
-repo_name: durango-dev/durango
+site_url: https://bryaneburr.github.io/durango-config/
+repo_url: https://github.com/bryaneburr/durango-config
+repo_name: bryaneburr/durango-config
 theme:
   name: material
   features:

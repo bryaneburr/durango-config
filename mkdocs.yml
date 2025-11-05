@@ -4,38 +4,31 @@ site_url: https://bryaneburr.github.io/durango-config/
 repo_url: https://github.com/bryaneburr/durango-config
 repo_name: bryaneburr/durango-config
 theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.instant
-    - navigation.top
-    - content.code.copy
-  palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: teal
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: teal
+  name: shadcn
+  icon: heroicons:folder
 markdown_extensions:
   - admonition
-  - codehilite
-  - footnotes
-  - pymdownx.details
-  - pymdownx.highlight
-  - pymdownx.superfences
   - toc:
       permalink: true
+  - attr_list
+  - mkdocs-click
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path:
+        - .
+        - ..
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
+          paths: ["src"]
           options:
             docstring_style: google
             show_source: false
+extra_css:
+  - assets/theme.css
 nav:
   - Overview: index.md
   - Reference:

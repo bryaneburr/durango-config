@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 import io
+from collections.abc import Mapping
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Mapping
+from typing import Any
 
 from durango.exceptions import ConfigFileError, UnsupportedFormatError
 from durango.utils import deep_merge_dicts, ensure_path
@@ -79,14 +80,22 @@ def load_config_file(
     try:
         text = resolved.read_text(encoding="utf-8")
     except OSError as exc:
-        raise ConfigFileError(path=resolved, message="Unable to read configuration file", cause=exc)
+        raise ConfigFileError(
+            path=resolved,
+            message="Unable to read configuration file",
+            cause=exc,
+        ) from exc
 
     try:
         data = _parse_text(text, format_name=format_name, path=resolved)
     except UnsupportedFormatError:
         raise
     except Exception as exc:  # pylint: disable=broad-except
-        raise ConfigFileError(path=resolved, message="Failed to parse configuration file", cause=exc)
+        raise ConfigFileError(
+            path=resolved,
+            message="Failed to parse configuration file",
+            cause=exc,
+        ) from exc
 
     if data is None:
         return {}
@@ -306,9 +315,9 @@ def _render_toml_value(value: Any) -> str:
 
 def _load_toml(text: str, *, path: Path) -> dict[str, Any]:
     try:
-        import tomllib  # type: ignore[import-not-found]
+        import tomllib
     except ModuleNotFoundError:  # pragma: no cover - Python < 3.11
-        import tomli as tomllib  # type: ignore[no-redef]
+        import tomli as tomllib
 
     data = tomllib.loads(text)
     if not isinstance(data, Mapping):

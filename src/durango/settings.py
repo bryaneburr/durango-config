@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from pydantic import ConfigDict
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class DurangoSettings(BaseSettings):
@@ -14,9 +13,8 @@ class DurangoSettings(BaseSettings):
     defers environment parsing to the `ConfigManager`.
     """
 
-    model_config = ConfigDict(
+    model_config = SettingsConfigDict(
         extra="forbid",
         frozen=False,
-        env_prefix="",
         validate_assignment=False,
     )

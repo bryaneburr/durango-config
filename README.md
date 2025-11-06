@@ -1,6 +1,6 @@
 [![CI](https://github.com/bryaneburr/durango-config/actions/workflows/ci.yml/badge.svg)](https://github.com/bryaneburr/durango-config/actions/workflows/ci.yml)
-![PyPI - Version](https://img.shields.io/pypi/v/durango-config)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/durango-config)
+![PyPI - Version](https://img.shields.io/pypi/v/durango)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/durango)
 ![GitHub License](https://img.shields.io/github/license/bryaneburr/durango-config)
 
 # Durango

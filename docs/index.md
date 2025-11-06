@@ -11,7 +11,7 @@ Durango is a configuration toolkit for Python applications that need predictable
 
 ## Installation
 
-Pick the installer that fits your project:
+Durango is available on PyPI as `durango`. Use whichever installer matches your workflow:
 
 ```bash
 # Using uv (recommended)

@@ -1,5 +1,11 @@
 # Durango Status Log
 
+## 2025-02-15 — Session Notes
+
+- Documented the expanded Invoke release workflow (build, publish, bump-version, tag-version, release) powered by uv.
+- Updated README/docs to describe new flags (`--index-url`, `--skip-existing`, `--dry-run`) and token handling expectations.
+- Next: fill in remaining release metadata (long description URLs, project homepage) before first upload.
+
 ## 2025-11-04 — Session Notes
 
 - Scaffolded new Durango package with tooling, docs skeleton, and CI workflow.

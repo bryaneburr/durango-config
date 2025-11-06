@@ -114,3 +114,4 @@ The [Config Manager reference](reference/config-manager.md) walks through each c
 - [Config Manager](reference/config-manager.md) – constructor options, callback lifecycle, and override mechanics.
 - [Settings Models](reference/settings.md) – guidance for shaping nested models and keeping defaults consistent.
 - [Architecture](architecture.md) – deeper look at how sources, utilities, and settings interact.
+- Maintainers: see the repository README for release automation (`build`, `publish`, `bump-version`, `tag-version`, `release`).

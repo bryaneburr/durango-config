@@ -71,6 +71,38 @@ Frequently used tasks:
 - `uv run invoke sync` — refresh local environments (installs `dev` and `docs` extras).
 - `uv run invoke ci` — execute Ruff, MyPy, pytest, and MkDocs in one shot.
 - `uv run invoke docs-serve` — launch the docs preview server at `http://127.0.0.1:8000`.
+- `uv run invoke build` — generate wheel and source distributions (add `--clean` to delete existing artifacts).
+- `uv run invoke publish` — upload distributions to PyPI/TestPyPI with `--index-url`, `--skip-existing`, or `--dry-run`.
+- `uv run invoke bump-version` — bump semantic versions or preview changes with `--dry-run`.
+- `uv run invoke tag-version` — create annotated git tags and optionally push them.
+- `uv run invoke release` — combine version bumping, publishing, and tagging into one workflow.
+
+### Publishing
+
+Run a dry run before publishing to confirm the workflow:
+
+```bash
+uv run invoke build
+uv run invoke publish --index-url https://test.pypi.org/simple/ --skip-existing --dry-run
+uv run invoke release --dry-run
+```
+
+When you are ready to ship, supply your API token directly (it will appear in the echoed command):
+
+```bash
+uv run invoke bump-version --part patch
+uv run invoke build --clean
+uv run invoke publish --token "$PYPI_API_TOKEN"
+uv run invoke tag-version --push
+```
+
+Or let the release task orchestrate the steps:
+
+```bash
+uv run invoke release --token "$PYPI_API_TOKEN" --push-tag
+```
+
+Use `--index-url https://test.pypi.org/simple/` to target TestPyPI, `--skip-existing` to avoid duplicate uploads, and `--dry-run` any time you want to inspect the composed commands without executing them.
 
 ## License
 

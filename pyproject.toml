@@ -33,6 +33,7 @@ dependencies = [
   "ruamel.yaml>=0.17",
   "mkdocs-shadcn>=0.9.7",
   "mkdocs-click>=0.9.0",
+  "invoke>=2.2.1",
 ]
 
 [project.optional-dependencies]
@@ -88,7 +89,7 @@ plugins = ["pydantic.mypy"]
 ignore_missing_imports = false
 
 [[tool.mypy.overrides]]
-module = ["ruamel.yaml", "ruamel.yaml.*", "tomli", "tomllib", "pytest"]
+module = ["ruamel.yaml", "ruamel.yaml.*", "tomli", "tomllib", "pytest", "invoke"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

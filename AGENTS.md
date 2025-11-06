@@ -5,6 +5,7 @@ Durango is a standalone configuration toolkit built on Pydantic Settings. Use th
 ## Primary Directives
 
 - Ship Durango as a reusable package: keep dependencies minimal, support Python 3.9–3.12, and document public APIs with Google-style docstrings.
+- Use `uv` + Invoke tasks (`uv run invoke <task>`) for repeatable workflows; extend `tasks.py` when adding new automation so agents stay in sync.
 - `ConfigManager` is the only orchestration entry point. All precedence changes, file bootstrap tweaks, or lifecycle hooks must update docs, tests, and the relevant `AGENTS.md` notes.
 - Defaults come from settings models, then config files, env vars, and programmatic overrides. Preserve that order and keep file creation idempotent.
 - Configuration files must be readable/writable in YAML, JSON, or TOML. When introducing new formats or serializers, coordinate updates in sources/tests/docs.

@@ -58,6 +58,20 @@ Run the full pre-commit suite before sending a pull request:
 uv run pre-commit run --all-files
 ```
 
+### Invoke shortcuts
+
+Durango provides [Invoke](https://www.pyinvoke.org/) tasks that mirror our CI checks. After syncing dependencies run:
+
+```bash
+uv run invoke --list
+```
+
+Frequently used tasks:
+
+- `uv run invoke sync` — refresh local environments (installs `dev` and `docs` extras).
+- `uv run invoke ci` — execute Ruff, MyPy, pytest, and MkDocs in one shot.
+- `uv run invoke docs-serve` — launch the docs preview server at `http://127.0.0.1:8000`.
+
 ## License
 
 Durango is available under the MIT License. See `LICENSE` for details.

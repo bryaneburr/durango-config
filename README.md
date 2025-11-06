@@ -1,3 +1,8 @@
+[![CI](https://github.com/bryaneburr/durango-config/actions/workflows/ci.yml/badge.svg)](https://github.com/bryaneburr/durango-config/actions/workflows/ci.yml)
+![PyPI - Version](https://img.shields.io/pypi/v/durango)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/durango)
+![GitHub License](https://img.shields.io/github/license/bryaneburr/durango-config)
+
 # Durango
 
 <img src="https://github.com/bryaneburr/durango-config/raw/main/images/durango_logo.png" height="200" style="height: 200px" />
@@ -45,32 +50,11 @@ Environment variables take the form `MYAPP__API_URL=true`. To override a nested 
 
 ## Contributing
 
-Install the development dependencies with [uv](https://github.com/astral-sh/uv):
+See [docs/contributing.md](docs/contributing.md) for full setup, workflow, and review guidelines. Highlights:
 
-```bash
-uv sync --all-extras --dev
-uv run pre-commit install
-```
-
-Run the full pre-commit suite before sending a pull request:
-
-```bash
-uv run pre-commit run --all-files
-```
-
-### Invoke shortcuts
-
-Durango provides [Invoke](https://www.pyinvoke.org/) tasks that mirror our CI checks. After syncing dependencies run:
-
-```bash
-uv run invoke --list
-```
-
-Frequently used tasks:
-
-- `uv run invoke sync` — refresh local environments (installs `dev` and `docs` extras).
-- `uv run invoke ci` — execute Ruff, MyPy, pytest, and MkDocs in one shot.
-- `uv run invoke docs-serve` — launch the docs preview server at `http://127.0.0.1:8000`.
+- Install dependencies with `uv sync --all-extras --dev`.
+- Run `uv run invoke ci` before opening a pull request.
+- Publishing and release automation are covered in [docs/publishing.md](docs/publishing.md).
 
 ## License
 

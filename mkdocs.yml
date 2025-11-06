@@ -31,6 +31,9 @@ extra_css:
   - assets/theme.css
 nav:
   - Overview: index.md
+  - Guides:
+      - Contributing: contributing.md
+      - Publishing: publishing.md
   - Reference:
       - Config Manager: reference/config-manager.md
       - Settings Models: reference/settings.md

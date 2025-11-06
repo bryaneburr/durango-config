@@ -17,6 +17,20 @@ Durango is a lightweight configuration management toolkit that layers strongly t
 - **Reload aware**: refresh configuration at runtime and hook into lifecycle callbacks.
 - **Extensible**: adapt environment prefixes, merge behaviour, and file lookup strategies to fit your application.
 
+## Installation
+
+Durango is published on PyPI as `durango`. Install it with your preferred tool:
+
+```bash
+# Using uv (recommended)
+uv add durango
+
+# Using pip
+pip install durango
+```
+
+Durango supports Python 3.9 through 3.12.
+
 ## Quick Start
 
 ```python

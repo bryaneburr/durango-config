@@ -18,4 +18,4 @@ Durango coordinates configuration across multiple consumers. Keep this document 
 
 - Document custom source extension points and JSON error payload expectations when they change so downstream consumers stay aligned.
 - Flesh out docs for multi-level nested settings and environment overrides.
-- Prepare release automation for TestPyPI/PyPI once documentation stabilizes.
+- Maintain the existing TestPyPI/PyPI automation (`invoke publish`/`invoke release`), documenting smoke-test expectations and flag requirements whenever the workflow evolves.

@@ -13,4 +13,3 @@ Durango is a standalone configuration toolkit built on Pydantic Settings. Use th
 - Keep helpers pure where possible; ensure new utilities or sources document coordination expectations (`src/durango/**/AGENTS.md`).
 - Maintain docs in `docs/` + `notes/`, recording decisions and next steps in `notes/STATUS.md`.
 - Prepare releases via feature branches, running `uv run pre-commit run --all-files`, `uv run pytest`, `uv run mypy`, and `uv run mkdocs build --strict` before tagging.
-- After Durango reaches PyPI, integrate into dorgy through lazy imports and shared CLI helpers, keeping Chromadb/search state updates consistent.
